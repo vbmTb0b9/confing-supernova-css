@@ -22,7 +22,6 @@ and their value rendered using `rendered-color` blueprint
 
 *}
 :root {
-{[ let brand = ds.currentBrand() /]}
 {[ for token in ds.tokensByType("Color", brand.id) ]}
     {[ inject "rendered-token-var" context token /]}
     
@@ -38,7 +37,6 @@ and their value rendered using `gradient-color` blueprint
 
 *}
 :root {
-{[ let brand = ds.currentBrand() /]}
 {[ for token in ds.tokensByType("Gradient", brand.id) ]}
     {[ inject "rendered-token-var" context token /]}
     
@@ -54,7 +52,6 @@ and their value rendered using `rendered-measure` blueprint
 
 *}
 :root {
-{[ let brand = ds.currentBrand() /]}
 {[ for token in ds.tokensByType("Measure", brand.id) ]}
     {[ inject "rendered-token-var" context token /]}
     
@@ -85,7 +82,6 @@ Tokens are named by their group path and then name,
 and their value rendered using `rendered-color` blueprint
 
 *}
-{[ let brand = ds.currentBrand() /]}
 {[ const allTokens = ds.tokensByType("Typography", brand.id) /]}
 {[ for token in allTokens ]}
 {[ if !token.referencedToken ]}
